@@ -10,6 +10,10 @@ models.Base.metadata.create_all(bind=engine)
 
 # Initialize FastAPI app
 app = FastAPI(title="Kirana AI")
+@app.get("/")
+def root():
+    return {"status": "Kirana AI backend is running"}
+
 
 # CORS configuration
 app.add_middleware(
