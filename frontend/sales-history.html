@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kirana AI – Sales History</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-bar">
+  <h2>Kirana AI</h2>
+  <nav>
+    <a href="index.html">📊 Dashboard</a>
+    <a href="add-sales.html">➕ Add Sales</a>
+  </nav>
+</header>
+
+<main class="page">
+
+  <h1>Sales History</h1>
+  <p>View, verify, and correct your past sales entries.</p>
+
+  <!-- FILTER -->
+  <section class="panel">
+    <label for="storeSelect"><strong>Select Store</strong></label>
+    <input
+      type="text"
+      id="storeSelect"
+      placeholder="e.g. Sharma Kirana"
+    />
+
+    <button id="loadHistoryBtn">Load History</button>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="panel">
+    <h2>Past Sales</h2>
+    <div id="salesHistory"></div>
+  </section>
+
+</main>
+
+<script src="sales-history.js"></script>
+</body>
+</html>

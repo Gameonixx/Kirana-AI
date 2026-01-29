@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kirana AI – Sales Dashboard</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="top-bar">
+  <div class="logo">
+    🛒 <strong>Kirana AI</strong>
+  </div>
+
+  <nav class="nav-actions">
+    <a href="index.html">📊 Dashboard</a>
+    <a href="sales-history.html">📁 View Sales</a>
+    <a href="add-sales.html">➕ Add Sales</a>
+  </nav>
+</header>
+
+
+<h1>Sales Dashboard</h1>
+
+<!-- ================= TOP CARDS ================= -->
+<div class="cards">
+  <div class="card">
+    <h3>Total Sales</h3>
+    <p id="totalSales">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Total Items</h3>
+    <p id="totalItems">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Total Revenue</h3>
+    <p id="totalRevenue">₹0</p>
+  </div>
+</div>
+
+<!-- ================= DAILY SUMMARY ================= -->
+<section class="panel">
+  <h2>Daily Summary</h2>
+
+  <input type="date" id="dailyDate" />
+  <button onclick="loadDailySummary()">Load Daily Summary</button>
+
+  <div id="dailyResult" class="result"></div>
+</section>
+
+<!-- ================= MONTHLY SUMMARY ================= -->
+<section class="panel">
+  <h2>Monthly Summary</h2>
+
+  <select id="month">
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+  </select>
+
+  <input type="number" id="year" placeholder="Year (e.g. 2026)" />
+
+  <button onclick="loadMonthlySummary()">Load Monthly Summary</button>
+
+  <!-- ✅ THIS FIXES MONTHLY SUMMARY VISIBILITY -->
+  <div id="monthlyResult" class="result"></div>
+</section>
+
+<!-- ================= REVENUE TREND ================= -->
+<section class="panel">
+  <h2>Revenue Trend (Last 7 Days)</h2>
+  <canvas id="trendChart"></canvas>
+</section>
+
+<!-- ================= STORE SUMMARY ================= -->
+<section class="panel">
+  <h2>Store-wise Revenue</h2>
+  <div id="storeList"></div>
+  <h3 id="topStore"></h3>
+</section>
+
+<!-- ================= AI INSIGHTS ================= -->
+<section class="panel">
+  <h2>🤖 AI Insights</h2>
+  <div id="aiInsights">
+    <p>Loading insights...</p>
+  </div>
+</section>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
