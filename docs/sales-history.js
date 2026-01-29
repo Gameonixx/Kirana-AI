@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://kirana-ai-backend.onrender.com";
 
 const storeSelect = document.getElementById("storeSelect");
 const loadBtn = document.getElementById("loadHistoryBtn");
